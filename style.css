@@ -1,0 +1,25 @@
+.NavSection {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    margin: 10px;
+    width: 90%;
+}
+
+.ParentContainerFlexBox {
+
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.ChildContainerFlexBox {
+    display: flex;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    width: 48%;
+    height: 300px;
+
+
+}
