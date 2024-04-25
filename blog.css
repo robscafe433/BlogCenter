@@ -1,0 +1,15 @@
+#eachEntryDivId {
+    border: solid;
+    border-width: 2px;
+    margin: 10px 0px;
+}
+
+#navId {
+    display: flex;
+}
+
+#blogBackButton {
+    position: fixed;
+    right: 0;
+    margin-right: 100px;
+}
