@@ -1,6 +1,6 @@
 const body = document.body;
 const aside = document.getElementById('aside');
-
+let count = 0;
 const questionEl = document.createElement('h1');
 questionEl.textContent = "What's on your mind?";
 
@@ -8,15 +8,19 @@ const formTitleEl = document.createElement('h4');
 formTitleEl.textContent = 'Username';
 
 const userNameFormInputEl = document.createElement('input');
+const blogTitle = document.createElement('h4');
+const blogContent = document.createElement('h4');
 
+let blogArray = [];
+
+// const userNameFormInputEl = document.createElement('input');
 userNameFormInputEl.type = 'text';
-// below is a key/value pair name="username". This attribute is used when sending data in a form submission. Also example , value: " // what was entered "
+// below is a key/value pair name="username".
 userNameFormInputEl.name = 'username';
 // the below can be used to connect the CSS
 userNameFormInputEl.id = 'username';
 userNameFormInputEl.placeholder = 'Enter your username';
 
-const blogTitle = document.createElement('h4');
 blogTitle.textContent = 'Title';
 const blogTitleFormInputEl = document.createElement('input');
 
@@ -25,7 +29,6 @@ blogTitleFormInputEl.name = 'title';
 blogTitleFormInputEl.id = 'title';
 blogTitleFormInputEl.placeholder = 'Enter your title here';
 
-const blogContent = document.createElement('h4');
 blogContent.textContent = 'Content';
 const blogContentFormInputEl = document.createElement('input');
 
@@ -51,5 +54,13 @@ aside.append(
 );
 
 submitButton.addEventListener('click', function () {
-    
+    let blogData = {};
+    blogData.objName = userNameFormInputEl.value;
+    blogData.objTitle = blogTitleFormInputEl.value;
+    blogData.objContent = blogContentFormInputEl.value;
+
+    blogArray.push(blogData);
+
+    console.log('This should be updated object', blogData);
+    console.log('This is entire blogArray', blogArray);
 });
