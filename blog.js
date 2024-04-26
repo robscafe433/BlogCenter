@@ -24,6 +24,8 @@ blogArrayFromLS.forEach((element) => {
     blogContent.setAttribute('id', 'blogContentId');
     blogName.setAttribute('id', 'blogNameId');
 
+    console.log('Logging the object you can see the key value pairs', element);
+
     blogTitle.textContent = element.objName;
     blogContent.textContent = element.objTitle;
     blogName.textContent = element.objContent;
