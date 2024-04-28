@@ -45,9 +45,13 @@ blogContentFormInputEl.name = 'content';
 blogContentFormInputEl.id = 'content';
 blogContentFormInputEl.placeholder = 'Enter your content here';
 
+const blogAnchorButtonTag = document.createElement('a');
+blogAnchorButtonTag.setAttribute('href', './blog.html');
+
+//Start of submit button
 const submitButton = document.createElement('button');
-submitButton.textContent = 'Submit';
-submitButton.style.display = 'block';
+submitButton.setAttribute('id', 'submit-button-css');
+submitButton.textContent = 'Submit Button';
 
 //Used append instead of appendChild so I could enter multiple nodes/elements
 aside.append(
@@ -61,8 +65,11 @@ aside.append(
     blogContent,
     blogContentLabel,
     blogContentFormInputEl,
-    submitButton
+    blogAnchorButtonTag
 );
+
+//Used to append the child "SubmitButton" to the anchor tage "blockAnchorButtonTag"
+blogAnchorButtonTag.appendChild(submitButton);
 
 submitButton.addEventListener('click', function () {
     let blogData = {
