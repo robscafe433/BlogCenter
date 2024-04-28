@@ -1,3 +1,7 @@
+body {
+    background-color: grey;
+}
+
 #eachEntryDivId {
     border: solid;
     border-width: 2px;

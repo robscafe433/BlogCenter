@@ -17,7 +17,12 @@ blogTitle.textContent = 'Title';
 const blogContent = document.createElement('h4');
 blogContent.textContent = 'Content';
 
+//Start of form
+
+const blogForm = document.createElement('form');
+
 // Form Name Input:
+const blogNameLabel = document.createElement('label');
 const blogNameFormInputEl = document.createElement('input');
 blogNameFormInputEl.type = 'text';
 blogNameFormInputEl.name = 'username';
@@ -25,6 +30,7 @@ blogNameFormInputEl.id = 'username';
 blogNameFormInputEl.placeholder = 'Enter your username';
 
 //Form Title Input:
+const blogTitleLabel = document.createElement('label');
 const blogTitleFormInputEl = document.createElement('input');
 blogTitleFormInputEl.type = 'text';
 blogTitleFormInputEl.name = 'title';
@@ -32,6 +38,7 @@ blogTitleFormInputEl.id = 'title';
 blogTitleFormInputEl.placeholder = 'Enter your title here';
 
 //Form Content Input:
+const blogContentLabel = document.createElement('label');
 const blogContentFormInputEl = document.createElement('input');
 blogContentFormInputEl.type = 'text';
 blogContentFormInputEl.name = 'content';
@@ -46,19 +53,23 @@ submitButton.style.display = 'block';
 aside.append(
     questionEl,
     blogName,
+    blogNameLabel,
     blogNameFormInputEl,
     blogTitle,
+    blogTitleLabel,
     blogTitleFormInputEl,
     blogContent,
+    blogContentLabel,
     blogContentFormInputEl,
     submitButton
 );
 
 submitButton.addEventListener('click', function () {
-    let blogData = {};
-    blogData.objName = blogNameFormInputEl.value;
-    blogData.objTitle = blogTitleFormInputEl.value;
-    blogData.objContent = blogContentFormInputEl.value;
+    let blogData = {
+        objName: blogNameFormInputEl.value,
+        objTitle: blogTitleFormInputEl.value,
+        objContent: blogContentFormInputEl.value,
+    };
 
     blogArray.push(blogData);
     // sends full array of all objects created to localStorage in Stringified form.
