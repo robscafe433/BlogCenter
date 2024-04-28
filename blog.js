@@ -1,8 +1,20 @@
 let blogArrayFromLS = [];
 const summary = document.getElementById('summary');
+const navId = document.getElementById('navId');
 
 blogArrayFromLS = JSON.parse(localStorage.getItem('blogLocalStorage'));
-console.log('here is the data from LS: ', blogArrayFromLS);
+
+//Dynaically creates an "a" tag and button
+
+const blogAnchorTag = document.createElement('a');
+blogAnchorTag.setAttribute('href', './index.html');
+
+const returnToIndexButton = document.createElement('button');
+returnToIndexButton.setAttribute('id', 'returnToIndexButtonCss');
+returnToIndexButton.textContent = 'Back';
+
+navId.append(blogAnchorTag);
+blogAnchorTag.appendChild(returnToIndexButton);
 
 //Dynamically creates elements on blog.html
 

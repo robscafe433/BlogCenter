@@ -3,6 +3,10 @@ const aside = document.getElementById('aside');
 let count = 0;
 let blogArray = [];
 
+if (localStorage.getItem('blogLocalStorage')) {
+    blogArray = JSON.parse(localStorage.getItem('blogLocalStorage'));
+}
+
 //Top of page question
 const questionEl = document.createElement('h1');
 questionEl.textContent = "What's on your mind?";
@@ -79,13 +83,11 @@ submitButton.addEventListener('click', function () {
     };
 
     blogArray.push(blogData);
+
     // sends full array of all objects created to localStorage in Stringified form.
     localStorage.setItem('blogLocalStorage', JSON.stringify(blogArray));
 
-    console.log('This should be updated object', blogData);
-    console.log('This is entire blogArray', blogArray);
-
-    blogNameFormInputEl.value = null;
-    blogTitleFormInputEl.value = null;
-    blogContentFormInputEl.value = null;
+    // blogNameFormInputEl.value = null;
+    // blogTitleFormInputEl.value = null;
+    // blogContentFormInputEl.value = null;
 });
