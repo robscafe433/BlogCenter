@@ -1,6 +1,9 @@
 body {
-    background-color: grey;
+    background-color: white;
+    color: black;
 }
+
+
 
 #aside {
     padding-top: 30px;
@@ -14,6 +17,7 @@ body {
     margin: 20px auto;
     width: 97.5%;
     height: 50px;
+
 }
 
 .ParentContainerFlexBox {
@@ -43,4 +47,17 @@ body {
 
     display: block;
     margin-top: 20px;
+}
+
+.darkModeButtonPosition {
+    float: right;
+    margin: 15px;
+    color: white;
+    background-color: black;
+
+}
+
+.darkMode {
+    background-color: black;
+    color: white;
 }

@@ -1,5 +1,6 @@
 body {
-    background-color: grey;
+    background-color: white;
+    color: black;
 }
 
 #eachEntryDivId {
@@ -46,4 +47,10 @@ body {
 
 #blogNameId {
     padding-left: 10px;
+}
+
+
+.darkMode {
+    background-color: black;
+    color: white;
 }

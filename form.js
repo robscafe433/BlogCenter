@@ -101,3 +101,11 @@ submitButton.addEventListener('click', function () {
     // blogTitleFormInputEl.value = null;
     // blogContentFormInputEl.value = null;
 });
+
+const changeToDarkModeButton = document.getElementById(
+    'changeToDarkModeButton'
+);
+changeToDarkModeButton.addEventListener('click', function () {
+    let element = document.body;
+    element.classList.toggle('darkMode');
+});
