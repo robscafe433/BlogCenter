@@ -6,14 +6,44 @@ body {
     border: solid;
     border-width: 2px;
     margin: 10px 0px;
+    padding: 10px;
 }
 
 #navId {
+    border-bottom: solid black;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+
+#returnToIndexButtonCss {
+
+
+    margin-right: 100px;
+
+
+}
+
+#spanAndNameContainerCSS {
     display: flex;
 }
 
-#returnToIndexButtonCss {
-    position: fixed;
-    right: 0;
-    margin-right: 100px;
+/* I wanted Span and H3 on the same line, however span was not aligning to H3 because it's H3 automatic style, and span did not have an automatic style.  (Per browswer devTools) , so ended up copying H3 style rules and copied them to span id's css rules*/
+#blogSpanCSS {
+
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+#blogNameId {
+    padding-left: 10px;
 }

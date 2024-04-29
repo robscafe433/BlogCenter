@@ -2,12 +2,18 @@ body {
     background-color: grey;
 }
 
+#aside {
+    padding-top: 30px;
+    padding-left: 10px;
+}
+
 .NavSection {
     border-style: solid;
     border-width: 2px;
     border-color: black;
-    margin: 10px;
-    width: 90%;
+    margin: 20px auto;
+    width: 97.5%;
+    height: 50px;
 }
 
 .ParentContainerFlexBox {
@@ -23,9 +29,14 @@ body {
     border-width: 2px;
     border-color: black;
     width: 48%;
-    height: 500px;
 
 
+
+}
+
+#middleLeftSideImageCss {
+    display: block;
+    margin: auto;
 }
 
 #submit-button-css {

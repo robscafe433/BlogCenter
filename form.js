@@ -1,5 +1,7 @@
 const body = document.body;
 const aside = document.getElementById('aside');
+const middleSectionLeftSide = document.getElementById('middleSectionLeftSide');
+
 let count = 0;
 let blogArray = [];
 
@@ -7,11 +9,16 @@ if (localStorage.getItem('blogLocalStorage')) {
     blogArray = JSON.parse(localStorage.getItem('blogLocalStorage'));
 }
 
-//Top of page question
+//Image (middle section left-side):
+middleLeftSideImage = document.createElement('img');
+middleLeftSideImage.setAttribute('src', './MyFirstBlog-resized.png');
+middleLeftSideImage.setAttribute('id', 'middleLeftSideImageCss');
+
+// Form section (middle section right-side):
+
 const questionEl = document.createElement('h1');
 questionEl.textContent = "What's on your mind?";
 
-// Form section descriptions:
 const blogName = document.createElement('h4');
 blogName.textContent = 'Username';
 
@@ -58,6 +65,9 @@ submitButton.setAttribute('id', 'submit-button-css');
 submitButton.textContent = 'Submit Button';
 
 //Used append instead of appendChild so I could enter multiple nodes/elements
+
+middleSectionLeftSide.append(middleLeftSideImage);
+
 aside.append(
     questionEl,
     blogName,
