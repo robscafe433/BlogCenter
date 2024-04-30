@@ -3,6 +3,10 @@ const aside = document.getElementById('aside');
 
 let blogArray = [];
 
+if (localStorage.getItem('blogLocalStorage')) {
+    blogArray = JSON.parse(localStorage.getItem('blogLocalStorage'));
+}
+
 //Image (middle section left-side):
 
 // Form section (middle section right-side):
