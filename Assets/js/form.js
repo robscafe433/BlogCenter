@@ -1,18 +1,9 @@
 const body = document.body;
 const aside = document.getElementById('aside');
-const middleSectionLeftSide = document.getElementById('middleSectionLeftSide');
 
-let count = 0;
 let blogArray = [];
 
-if (localStorage.getItem('blogLocalStorage')) {
-    blogArray = JSON.parse(localStorage.getItem('blogLocalStorage'));
-}
-
 //Image (middle section left-side):
-middleLeftSideImage = document.createElement('img');
-middleLeftSideImage.setAttribute('src', './MyFirstBlog-resized.png');
-middleLeftSideImage.setAttribute('id', 'middleLeftSideImageCss');
 
 // Form section (middle section right-side):
 
@@ -29,8 +20,6 @@ const blogContent = document.createElement('h4');
 blogContent.textContent = 'Content';
 
 //Start of form
-
-const blogForm = document.createElement('form');
 
 // Form Name Input:
 const blogNameLabel = document.createElement('label');
@@ -100,12 +89,4 @@ submitButton.addEventListener('click', function () {
     // blogNameFormInputEl.value = null;
     // blogTitleFormInputEl.value = null;
     // blogContentFormInputEl.value = null;
-});
-
-const changeToDarkModeButton = document.getElementById(
-    'changeToDarkModeButton'
-);
-changeToDarkModeButton.addEventListener('click', function () {
-    let element = document.body;
-    element.classList.toggle('darkMode');
 });
