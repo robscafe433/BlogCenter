@@ -36,7 +36,7 @@ Github repository: https://github.com/robscafe433/BlogCenter
 Webpage Screenshot:
 
 <!-- example code below -->
-   <!-- ![Screen print of web page.](GarciasTruckingCompanyL.L.C.png) -->
+   ![Screen print of web page.](BlogCenter.png)
 
 
 ## Badges
